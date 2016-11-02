@@ -24,30 +24,8 @@ type MainActivity () =
         base.OnCreate (bundle)
 
         let g = new Platformer(this.Resources.DisplayMetrics.HeightPixels, this.Resources.DisplayMetrics.WidthPixels)
-        //let v = g.Services.GetService(typedefof<View>)
         this.SetContentView(g.Services.GetService(typedefof<View>) :?> View)
         g.Run()
-
-
-
-//type MainActivity () =
-//    inherit Activity ()
-//
-//    let mutable count:int = 1
-//
-//    override this.OnCreate (bundle) =
-//
-//        base.OnCreate (bundle)
-//
-//        // Set our view from the "main" layout resource
-//        this.SetContentView (Resource_Layout.Main)
-//
-//        // Get our button from the layout resource, and attach an event to it
-//        let button = this.FindViewById<Button>(Resource_Id.MyButton)
-//        button.Click.Add (fun args -> 
-//            button.Text <- sprintf "%d clicks!" count
-//            count <- count + 1
-//        )
 
 
 
