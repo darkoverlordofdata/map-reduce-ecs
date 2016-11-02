@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="FSharpGameLinux/FSharpGameLinux.fsproj">
+﻿<Properties StartupItem="FSharpGame/FSharpGame.fsproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
