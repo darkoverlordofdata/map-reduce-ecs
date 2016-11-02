@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpGame", "FSharpGame\FSharpGame.fsproj", "{6732CD35-9F17-4555-A939-4D521F068318}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSparpGameAndroid", "FSparpGameAndroid\FSparpGameAndroid.fsproj", "{E0AC5645-A498-44CA-BD02-82C06A007874}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D9CE996-8A9A-4BA6-8DBE-B644D46F306F}"
+	ProjectSection(SolutionItems) = preProject
+		license.md = license.md
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6732CD35-9F17-4555-A939-4D521F068318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6732CD35-9F17-4555-A939-4D521F068318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6732CD35-9F17-4555-A939-4D521F068318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6732CD35-9F17-4555-A939-4D521F068318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0AC5645-A498-44CA-BD02-82C06A007874}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
