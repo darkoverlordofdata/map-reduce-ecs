@@ -83,7 +83,8 @@ type Platformer (height, width) as this =
 
     (** Game Logic Loop *)
     override this.Update (gameTime) =
-        if GamePad.GetState(PlayerIndex.One).Buttons.Back = ButtonState.Pressed then this.Exit()
+        if GamePad.GetState(PlayerIndex.One).Buttons.Back = ButtonState.Pressed then 
+            this.Exit()
 
         let delta = float32 gameTime.ElapsedGameTime.TotalSeconds
         let current = Entities.Value

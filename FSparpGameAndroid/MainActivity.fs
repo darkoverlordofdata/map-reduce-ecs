@@ -1,5 +1,6 @@
 ﻿namespace FSparpGameAndroid
 
+(** Android Activity *)
 open System
 open Android.App
 open Android.Content.PM
