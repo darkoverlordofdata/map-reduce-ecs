@@ -4,23 +4,32 @@ open System
 open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 open Microsoft.Xna.Framework.Input
+open Microsoft.Xna.Framework.Input.Touch
+
 open System.Collections.Generic
 
-type Platformer () as this =
+type Platformer (height, width, mobile) as this =
     inherit EcsGame()
 
+    let scaleX = (float32) (width / 320)
+    let scaleY = (float32) (height / 480)
+    let matrix = Matrix.CreateScale(scaleX, scaleY, 1.0f)
+    let spriteBatch = lazy(new SpriteBatch(this.GraphicsDevice))
     let mutable first = true
-    let mutable spriteBatch = Unchecked.defaultof<SpriteBatch>
-    do this.Content.RootDirectory <- "Content"
+
     let graphics = new GraphicsDeviceManager(this)
-    do 
-        graphics.PreferredBackBufferWidth <- ScreenWidth
-        graphics.PreferredBackBufferHeight <- ScreenHeight
+
+    do
+        this.Content.RootDirectory <- "Content"
+        graphics.IsFullScreen <- mobile
+        graphics.PreferredBackBufferWidth <- width
+        graphics.PreferredBackBufferHeight <- height
         graphics.ApplyChanges()
 
+
     (** Define Entities *)
-    let mutable Entities = lazy(CreateEntityDB(this.Content))
     let bgdImage = lazy(this.Content.Load<Texture2D>("images/BackdropBlackLittleSparkBlack"))
+    let mutable Entities = lazy(CreateEntityDB(this.Content))
     let mutable fpsRect = Rectangle(0, 0, 16, 24)
 
     let fntImage = lazy(this.Content.Load<Texture2D>("images/tom-thumb-white"))
@@ -65,10 +74,8 @@ type Platformer () as this =
 
     (** Initialize MonoGame *)
     override this.Initialize() =
-        spriteBatch <- new SpriteBatch(this.GraphicsDevice)
         this.IsMouseVisible <- true
         base.Initialize()
-
 
     (** Load Resources *)
     override this.LoadContent() =
@@ -76,12 +83,15 @@ type Platformer () as this =
 
     (** Game Logic Loop *)
     override this.Update (gameTime) =
+        if GamePad.GetState(PlayerIndex.One).Buttons.Back = ButtonState.Pressed then 
+            this.Exit()
+
         let delta = float32 gameTime.ElapsedGameTime.TotalSeconds
         let current = Entities.Value
 
         Entities <-  // Everything happens here:
             lazy (current
-                 |> List.map(InputSystem(Keyboard.GetState(), Mouse.GetState(), delta, this))
+                 |> List.map(InputSystem(Keyboard.GetState(), Mouse.GetState(), TouchPanel.GetState(), delta, mobile, this))
                  |> List.map(EntitySystem(this))
                  |> List.map(MovementSystem(delta))
                  |> List.map(ExpiringSystem(delta))
@@ -95,17 +105,17 @@ type Platformer () as this =
     (** Game Graphic Loop *)
     override this.Draw(gameTime) =
         this.GraphicsDevice.Clear Color.Black
-        spriteBatch.Begin()
-        spriteBatch.Draw(bgdImage.Value, bgdRect, Color.White)   
-        DrawFps(spriteBatch, 1.f / float32 gameTime.ElapsedGameTime.TotalSeconds)
+        spriteBatch.Force().Begin(transformMatrix = Nullable matrix)
+        spriteBatch.Force().Draw(bgdImage.Value, bgdRect, Color.White)   
+        DrawFps(spriteBatch.Force(), 1.f / float32 gameTime.ElapsedGameTime.TotalSeconds)
         Entities.Value 
         |> List.filter(fun e -> e.Active) 
         |> List.sortBy(fun e -> e.Layer) 
-        |> List.iter(DrawSprite(spriteBatch))
-        spriteBatch.End()
+        |> List.iter(DrawSprite(spriteBatch.Force()))
+        spriteBatch.Force().End()
 
     (** Deactivate an Entity *)
-    override this.RemoveEntity(entity:Entity)=
+    override this.RemoveEntity(entity:Entity) =
         this.Deactivate <- entity.Id :: this.Deactivate
 
     (** Activate a Bullet *)
@@ -121,6 +131,6 @@ type Platformer () as this =
 
     (** Activate an Explosion *)
     override this.AddExplosion(position : Vector2, scale : float32) =
-        this.Explosions <- CreateTExplosion(position, scale)  :: this.Explosions
+        this.Explosions <- CreateTExplosion(position, scale) :: this.Explosions
 
 

@@ -24,7 +24,7 @@ type MainActivity () =
         
         base.OnCreate (bundle)
 
-        let g = new Platformer(this.Resources.DisplayMetrics.HeightPixels, this.Resources.DisplayMetrics.WidthPixels)
+        let g = new Platformer(this.Resources.DisplayMetrics.HeightPixels, this.Resources.DisplayMetrics.WidthPixels, true)
         this.SetContentView(g.Services.GetService(typedefof<View>) :?> View)
         g.Run()
 

@@ -48,3 +48,4 @@
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/OpenTK.dll
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Tao.Sdl.dll
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/FSharp.Core.dll
+/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Content/images/tom-thumb-white.png

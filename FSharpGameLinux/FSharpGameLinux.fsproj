@@ -52,19 +52,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components.fs" />
-    <Compile Include="Entity.fs" />
-    <Compile Include="Entities.fs" />
-    <Compile Include="Systems\EntitySystem.fs" />
-    <Compile Include="Systems\CollisionSystem.fs" />
-    <Compile Include="Systems\EnemySpawningSystem.fs" />
-    <Compile Include="Systems\InputSystem.fs" />
-    <Compile Include="Systems\MovementSystem.fs" />
-    <Compile Include="Systems\ExpiringSystem.fs" />
-    <Compile Include="Systems\RemoveOffscreenShipsSystem.fs" />
-    <Compile Include="Systems\ScaleAnimationSystem.fs" />
-    <Compile Include="PlatformerGame.fs" />
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
     <None Include="SDL.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -117,7 +104,8 @@
     <Content Include="Content\tom-thumb-original.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\tom-thumb-white.png">
+    <None Include="Content\Content.mgcb" />
+    <Content Include="Content\images\tom-thumb-white.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -133,6 +121,44 @@
   </Target>
   -->
   <ItemGroup>
-    <Folder Include="Systems\" />
+    <Compile Include="..\FSharpGame\Components.fs">
+      <Link>Components.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Entity.fs">
+      <Link>Entity.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Entities.fs">
+      <Link>Entities.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\EntitySystem.fs">
+      <Link>EntitySystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\CollisionSystem.fs">
+      <Link>CollisionSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\EnemySpawningSystem.fs">
+      <Link>EnemySpawningSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\InputSystem.fs">
+      <Link>InputSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\MovementSystem.fs">
+      <Link>MovementSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\ExpiringSystem.fs">
+      <Link>ExpiringSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\RemoveOffscreenShipsSystem.fs">
+      <Link>RemoveOffscreenShipsSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Systems\ScaleAnimationSystem.fs">
+      <Link>ScaleAnimationSystem.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\PlatformerGame.fs">
+      <Link>PlatformerGame.fs</Link>
+    </Compile>
+    <Compile Include="..\FSharpGame\Program.fs">
+      <Link>Program.fs</Link>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,11 @@
 ﻿<Properties StartupItem="FSharpGameLinux/FSharpGameLinux.fsproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/PlatformerGame.fs">
+    <Files>
+      <File FileName="FSharpGame/Program.fs" Line="9" Column="5" />
+      <File FileName="FSharpGame/PlatformerGame.fs" Line="35" Column="77" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
