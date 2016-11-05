@@ -27,9 +27,9 @@ let CreateTBullet(position : Vector2) : TBullet =
 (**
  * Create the Entity DataBase
  *) 
-let CreateEntityDB(content) = 
+let CreateEntityDB(content, width, height) = 
     [
-        CreatePlayer(content, Vector2(float32(ScreenWidth/2), float32 (ScreenHeight-80)));
+        CreatePlayer(content, Vector2(float32(width/2), float32 (height-80)));
         CreateExplosion(content, Vector2(0.f, 0.f), 1.f);
         CreateExplosion(content, Vector2(0.f, 0.f), 1.f);
         CreateExplosion(content, Vector2(0.f, 0.f), 1.f);
@@ -61,25 +61,25 @@ let CreateEntityDB(content) =
         CreateBullet(content, Vector2(0.f, 0.f));
         CreateBullet(content, Vector2(0.f, 0.f));
         CreateBullet(content, Vector2(0.f, 0.f));
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy1(content);
-        CreateEnemy2(content);
-        CreateEnemy2(content);
-        CreateEnemy2(content);
-        CreateEnemy2(content);
-        CreateEnemy2(content);
-        CreateEnemy2(content);
-        CreateEnemy3(content);
-        CreateEnemy3(content);
-        CreateEnemy3(content);
-        CreateEnemy3(content);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy1(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy2(content, width, height);
+        CreateEnemy3(content, width, height);
+        CreateEnemy3(content, width, height);
+        CreateEnemy3(content, width, height);
+        CreateEnemy3(content, width, height);
 
     ]
 

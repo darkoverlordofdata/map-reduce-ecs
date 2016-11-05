@@ -6,8 +6,7 @@ open Microsoft.Xna.Framework.Input
  * Activate / Deactiveate Entities as needed 
  *)
 
-let EntitySystem (game:EcsGame) entity =
-
+let EntitySystem (game:EcsGame, width: int, height: int) entity =
 
     match entity.Active with
     | true -> 
@@ -50,7 +49,7 @@ let EntitySystem (game:EcsGame) entity =
                {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(ScreenWidth)), 100.f);
+                        Position = Vector2(float32(rnd.Next(width)), 100.f);
                         Health = Some(CreateHealth(10, 10));
                 }
         | Layer.ENEMY2 ->
@@ -61,7 +60,7 @@ let EntitySystem (game:EcsGame) entity =
                 {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(ScreenWidth)), 200.f);
+                        Position = Vector2(float32(rnd.Next(width)), 200.f);
                         Health = Some(CreateHealth(20, 20));                
                 }
         | Layer.ENEMY3 ->
@@ -72,7 +71,7 @@ let EntitySystem (game:EcsGame) entity =
                 {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(ScreenWidth)), 300.f);
+                        Position = Vector2(float32(rnd.Next(width)), 300.f);
                         Health = Some(CreateHealth(60, 60));                
                 }
         | Layer.EXPLOSION ->

@@ -104,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.fs" />
     <None Include="Properties\AndroidManifest.xml" />
     <Content Include="packages.config" />
+    <Compile Include="..\FSharpGame\Core.fs">
+      <Link>Core.fs</Link>
+    </Compile>
     <Compile Include="..\FSharpGame\Components.fs">
       <Link>Components.fs</Link>
     </Compile>

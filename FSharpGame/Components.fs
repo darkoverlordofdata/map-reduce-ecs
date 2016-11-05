@@ -1,11 +1,10 @@
 ﻿[<AutoOpen>]
 module ComponentsModule
+open System
 open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 open Microsoft.Xna.Framework.Content
-(** 
- * Metadata to define the entity database
- *)
+
 
 (** Layer - All entities need a display layer *)
 type Layer =
@@ -46,24 +45,6 @@ type Enemies =
     | Enemy3            = 2
 
 
-(** Sprite Component *)
-type Sprite =
-    {
-        Width: int;
-        Height: int;
-        Texture : Texture2D;
-    }
-
- type IEntity = 
-    abstract member Id : int with get
-    abstract member Name: string with get
-    abstract member Active: bool with get
-    abstract member EntityType: int with get
-    abstract member Layer: int with get
-    abstract member Size: Vector2 with get
-    abstract member Position: Vector2 with get
-    abstract member Sprite: Sprite option with get
-
 (** Health Component *)
 type Health =
     {
@@ -87,6 +68,7 @@ type TEnemy =
     {
         Enemy : Enemies;
     }
+
 (** Request an explosion *)
 type TExplosion =
     {
@@ -103,23 +85,22 @@ type TBullet =
 (** Entity is a record of components *)
 type Entity =
     {
-        Id : int; (* Unique sequential id *)
-        Name : string; (* Display name *)
-        Active : bool; (* In use *)
+                                            (* *Core Items* *)
+        Id              : int;              (* Unique sequential id *)
+        Name            : string;           (* Display name *)
+        Active          : bool;             (* In use *)
+        EntityType      : EntityType;       (* Category *)
+        Layer           : Layer;            (* Display Layer *)
+        Size            : Vector2;          (* Size *)
+        Position        : Vector2;          (* Position *)
+        Sprite          : Sprite option;    (* Sprite *)
+        Scale           : Vector2 option;   (* Display Scale *)
 
-        (* All entities are required to have: *)
-        EntityType  : EntityType;
-        Layer       : Layer;
-        Size        : Vector2;
-        Position    : Vector2;
-
-        (* Optional components - used for match by systems *)
-        Sprite          : Sprite option;
+                                            (* *ShmupWarz Items* *)
         Bounds          : int option;
         Expires         : float32 option;
         Health          : Health option;
         Velocity        : Vector2 option;
-        Scale           : Vector2 option;
         ScaleAnimation  : ScaleAnimation option;
     }
     interface IEntity with
@@ -131,14 +112,16 @@ type Entity =
         member self.Size with get() = self.Size
         member self.Position with get() = self.Position
         member self.Sprite with get() = self.Sprite
+        member self.Scale with get() = self.Scale
 
 (**
  * The abstract EscGame provides interface and lists to
  * use for adding and removing entities
  *)
 [<AbstractClass>]
-type EcsGame()=
-    inherit Game()
+type EcsGame(height, width, mobile)=
+    inherit AbstractGame(height, width, mobile)
+    //inherit Game()
 
     member val Bullets = List.empty<TBullet> with get,set
     member val Deactivate = List.empty<int> with get,set
@@ -152,4 +135,14 @@ type EcsGame()=
     abstract member AddExplosion : Vector2 * float32 -> unit
     abstract member RemoveEntity: IEntity -> unit
 
+
+(**
+ * Returns a list of active entities for drawing.
+ * No need to rev the returned list, they will be sorted by layer.
+ *)
+let rec ActiveEntities (input:Entity list) (output:IEntity list) =
+    match input with
+    | x::xs when x.Active -> ActiveEntities xs ((x:>IEntity)::output)
+    | _::xs -> ActiveEntities xs output 
+    | [] -> output
 

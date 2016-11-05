@@ -8,8 +8,6 @@ open Microsoft.Xna.Framework.Content
  *
  *)
 
-let ScreenWidth = 480
-let ScreenHeight = 720
 let rnd = System.Random()
 let mutable UniqueId = 0
 let NextUniqueId() = 
@@ -87,8 +85,8 @@ let CreateBullet (content:ContentManager, position) =
     }
 
 (** Create Enemy *)
-let CreateEnemy1 (content:ContentManager)  =
-    let position = Vector2(float32(rnd.Next(ScreenWidth)), 100.f)
+let CreateEnemy1 (content:ContentManager, width: int, height: int)  =
+    let position = Vector2(float32(rnd.Next(width)), 100.f)
     let sprite = CreateSprite(Layer.ENEMY1, content.Load<Texture2D>("images/enemy1"))
     {
         Id = NextUniqueId();
@@ -109,8 +107,8 @@ let CreateEnemy1 (content:ContentManager)  =
     }
 
 (** Create Enemy *)
-let CreateEnemy2 (content:ContentManager) =
-    let position = Vector2(float32(rnd.Next(ScreenWidth)), 200.f)
+let CreateEnemy2 (content:ContentManager, width: int, height: int) =
+    let position = Vector2(float32(rnd.Next(width)), 200.f)
     let sprite = CreateSprite(Layer.ENEMY2, content.Load<Texture2D>("images/enemy2"))
     {
         Id = NextUniqueId();
@@ -131,8 +129,8 @@ let CreateEnemy2 (content:ContentManager) =
     }
 
 (** Create Enemy *)
-let CreateEnemy3 (content:ContentManager)  =
-    let position = Vector2(float32(rnd.Next(ScreenWidth)), 300.f)
+let CreateEnemy3 (content:ContentManager, width: int, height: int)  =
+    let position = Vector2(float32(rnd.Next(width)), 300.f)
     let sprite = CreateSprite(Layer.ENEMY3, content.Load<Texture2D>("images/enemy3"))
     {
         Id = NextUniqueId();
