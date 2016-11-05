@@ -154,8 +154,8 @@
     <Compile Include="..\FSharpGame\Systems\ScaleAnimationSystem.fs">
       <Link>ScaleAnimationSystem.fs</Link>
     </Compile>
-    <Compile Include="..\FSharpGame\PlatformerGame.fs">
-      <Link>PlatformerGame.fs</Link>
+    <Compile Include="..\FSharpGame\ShmupWarzGame.fs">
+      <Link>ShmupWarzGame.fs</Link>
     </Compile>
     <Compile Include="..\FSharpGame\Program.fs">
       <Link>Program.fs</Link>

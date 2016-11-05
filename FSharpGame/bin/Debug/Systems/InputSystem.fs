@@ -27,7 +27,7 @@ let InputSystem (kbState:KeyboardState, msState:MouseState, tcState:TouchCollect
                 HandleKeys xs 
 
     match entity.EntityType with
-    | Player -> 
+    | EntityType.Player -> 
 
         let position =
             if tcState.Count > 0 then

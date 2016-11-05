@@ -15,7 +15,7 @@ let CollisionSystem (game:EcsGame) entities =
 
     let FindCollision a b =
         match a.EntityType, a.Active, b.EntityType, b.Active with
-        | Enemy, true, Bullet, true -> 
+        | EntityType.Enemy, true, EntityType.Bullet, true -> 
             game.AddExplosion(b.Position, 0.25f)
             game.RemoveEntity(b)
             match a.Health with

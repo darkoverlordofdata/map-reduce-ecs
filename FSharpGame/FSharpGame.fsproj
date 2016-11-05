@@ -113,7 +113,7 @@
     <Compile Include="Systems\ScaleAnimationSystem.fs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="PlatformerGame.fs" />
+    <Compile Include="ShmupWarzGame.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>

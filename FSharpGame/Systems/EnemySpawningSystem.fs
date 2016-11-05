@@ -22,14 +22,15 @@ let EnemySpawningSystem (delta:float32, game:EcsGame) entities =
         if delta < 0.0f then
             game.AddEnemy(enemy)
             match enemy with
-            | Enemy1 -> float32(Timers.Timer1)
-            | Enemy2 -> float32(Timers.Timer2)
-            | Enemy3 -> float32(Timers.Timer3)
+            | Enemies.Enemy1 -> float32(Timers.Timer1)
+            | Enemies.Enemy2 -> float32(Timers.Timer2)
+            | Enemies.Enemy3 -> float32(Timers.Timer3)
+            | _ -> 0.0f
         else delta
 
-    enemyT1 <- spawnEnemy(enemyT1, Enemy1)
-    enemyT2 <- spawnEnemy(enemyT2, Enemy2)
-    enemyT3 <- spawnEnemy(enemyT3, Enemy3)
+    enemyT1 <- spawnEnemy(enemyT1, Enemies.Enemy1)
+    enemyT2 <- spawnEnemy(enemyT2, Enemies.Enemy2)
+    enemyT3 <- spawnEnemy(enemyT3, Enemies.Enemy3)
 
 
     entities

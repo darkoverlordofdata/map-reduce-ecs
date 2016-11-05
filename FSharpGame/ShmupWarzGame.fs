@@ -1,4 +1,4 @@
-﻿module PlatformerGame
+﻿module ShmupWarzGame
 
 open System
 open Microsoft.Xna.Framework
@@ -8,7 +8,7 @@ open Microsoft.Xna.Framework.Input.Touch
 
 open System.Collections.Generic
 
-type Platformer (height, width, mobile) as this =
+type ShmupWarz (height, width, mobile) as this =
     inherit EcsGame()
 
     let scaleX = (float32) (width / 320)
@@ -115,7 +115,7 @@ type Platformer (height, width, mobile) as this =
         spriteBatch.Force().End()
 
     (** Deactivate an Entity *)
-    override this.RemoveEntity(entity:Entity) =
+    override this.RemoveEntity(entity:IEntity) =
         this.Deactivate <- entity.Id :: this.Deactivate
 
     (** Activate a Bullet *)
@@ -125,9 +125,10 @@ type Platformer (height, width, mobile) as this =
     (** Activate an Enemy *)
     override this.AddEnemy(enemy : Enemies) =
         match enemy with 
-        | Enemy1 -> this.Enemies1 <- CreateTEnemy(enemy) :: this.Enemies1
-        | Enemy2 -> this.Enemies2 <- CreateTEnemy(enemy) :: this.Enemies2
-        | Enemy3 -> this.Enemies3 <- CreateTEnemy(enemy) :: this.Enemies3
+        | Enemies.Enemy1 -> this.Enemies1 <- CreateTEnemy(enemy) :: this.Enemies1
+        | Enemies.Enemy2 -> this.Enemies2 <- CreateTEnemy(enemy) :: this.Enemies2
+        | Enemies.Enemy3 -> this.Enemies3 <- CreateTEnemy(enemy) :: this.Enemies3
+        | _ -> ()
 
     (** Activate an Explosion *)
     override this.AddExplosion(position : Vector2, scale : float32) =

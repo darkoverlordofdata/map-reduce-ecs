@@ -6,7 +6,7 @@ open Android.App
 open Android.Content.PM
 open Android.OS
 open Android.Views
-open PlatformerGame
+open ShmupWarzGame
 
 
 [<Activity (Label = "FSparpGameAndroid"
@@ -24,7 +24,7 @@ type MainActivity () =
         
         base.OnCreate (bundle)
 
-        let g = new Platformer(this.Resources.DisplayMetrics.HeightPixels, this.Resources.DisplayMetrics.WidthPixels, true)
+        let g = new ShmupWarz(this.Resources.DisplayMetrics.HeightPixels, this.Resources.DisplayMetrics.WidthPixels, true)
         this.SetContentView(g.Services.GetService(typedefof<View>) :?> View)
         g.Run()
 

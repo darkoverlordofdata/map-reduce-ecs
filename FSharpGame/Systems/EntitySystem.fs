@@ -31,7 +31,7 @@ let EntitySystem (game:EcsGame) entity =
 
     | false -> 
         match entity.Layer with
-        | BULLET ->
+        | Layer.BULLET ->
             match game.Bullets with
             | [] -> entity
             | bullet :: rest ->
@@ -42,7 +42,7 @@ let EntitySystem (game:EcsGame) entity =
                         Expires = Some(0.5f);                        
                         Position = Vector2(bullet.Position.X, bullet.Position.Y);
                 }
-        | ENEMY1 ->
+        | Layer.ENEMY1 ->
             match game.Enemies1 with
             | [] -> entity
             | enemy :: rest ->
@@ -53,7 +53,7 @@ let EntitySystem (game:EcsGame) entity =
                         Position = Vector2(float32(rnd.Next(ScreenWidth)), 100.f);
                         Health = Some(CreateHealth(10, 10));
                 }
-        | ENEMY2 ->
+        | Layer.ENEMY2 ->
             match game.Enemies2 with
             | [] -> entity
             | enemy :: rest ->
@@ -64,7 +64,7 @@ let EntitySystem (game:EcsGame) entity =
                         Position = Vector2(float32(rnd.Next(ScreenWidth)), 200.f);
                         Health = Some(CreateHealth(20, 20));                
                 }
-        | ENEMY3 ->
+        | Layer.ENEMY3 ->
             match game.Enemies3 with
             | [] -> entity
             | enemy :: rest ->
@@ -75,7 +75,7 @@ let EntitySystem (game:EcsGame) entity =
                         Position = Vector2(float32(rnd.Next(ScreenWidth)), 300.f);
                         Health = Some(CreateHealth(60, 60));                
                 }
-        | EXPLOSION ->
+        | Layer.EXPLOSION ->
             match game.Explosions with
             | [] -> entity
             | exp :: rest ->

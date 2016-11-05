@@ -9,41 +9,41 @@ open Microsoft.Xna.Framework.Content
 
 (** Layer - All entities need a display layer *)
 type Layer =
-    | DEFAULT
-    | BACKGROUND
-    | TEXT
-    | LIVES
-    | ENEMY1
-    | ENEMY2
-    | ENEMY3
-    | PLAYER
-    | BULLET
-    | EXPLOSION
-    | PARTICLE
-    | HUD
-
-
-(** Sound Effect Component *)
-type Effect =
-    | PEW 
-    | ASPLODE
-    | SMALLASPLODE 
+    | DEFAULT           = 0
+    | BACKGROUND        = 1
+    | TEXT              = 2
+    | LIVES             = 3
+    | ENEMY1            = 4
+    | ENEMY2            = 5
+    | ENEMY3            = 6
+    | PLAYER            = 7
+    | BULLET            = 8
+    | EXPLOSION         = 9
+    | PARTICLE          = 10
+    | HUD               = 11
 
 
 (** EntityType Component *)
 type EntityType =
-    | Background
-    | Bullet
-    | Enemy
-    | Explosion
-    | Particle
-    | Player
+    | Background        = 0
+    | Bullet            = 1
+    | Enemy             = 2
+    | Explosion         = 3
+    | Particle          = 4
+    | Player            = 5
+
+(** Sound Effect Component *)
+type Effect =
+    | PEW               = 0
+    | ASPLODE           = 1
+    | SMALLASPLODE      = 2
+
 
 (** Enemy Type Component *)
 type Enemies =
-    | Enemy1
-    | Enemy2
-    | Enemy3
+    | Enemy1            = 0
+    | Enemy2            = 1
+    | Enemy3            = 2
 
 
 (** Sprite Component *)
@@ -53,6 +53,16 @@ type Sprite =
         Height: int;
         Texture : Texture2D;
     }
+
+ type IEntity = 
+    abstract member Id : int with get
+    abstract member Name: string with get
+    abstract member Active: bool with get
+    abstract member EntityType: int with get
+    abstract member Layer: int with get
+    abstract member Size: Vector2 with get
+    abstract member Position: Vector2 with get
+    abstract member Sprite: Sprite option with get
 
 (** Health Component *)
 type Health =
@@ -112,6 +122,15 @@ type Entity =
         Scale           : Vector2 option;
         ScaleAnimation  : ScaleAnimation option;
     }
+    interface IEntity with
+        member self.Id with get() = self.Id
+        member self.Name with get() = self.Name
+        member self.Active with get() = self.Active
+        member self.EntityType with get() = int self.EntityType
+        member self.Layer with get() = int self.Layer
+        member self.Size with get() = self.Size
+        member self.Position with get() = self.Position
+        member self.Sprite with get() = self.Sprite
 
 (**
  * The abstract EscGame provides interface and lists to
@@ -131,6 +150,6 @@ type EcsGame()=
     abstract member AddBullet : Vector2 -> unit
     abstract member AddEnemy : Enemies -> unit 
     abstract member AddExplosion : Vector2 * float32 -> unit
-    abstract member RemoveEntity: Entity -> unit
+    abstract member RemoveEntity: IEntity -> unit
 
 
