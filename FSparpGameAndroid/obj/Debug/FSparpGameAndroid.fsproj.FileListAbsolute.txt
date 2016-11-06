@@ -39,7 +39,6 @@ C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSparpGameAndroi
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSparpGameAndroid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSparpGameAndroid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSparpGameAndroid\obj\Debug\FSparpGameAndroid.dll.mdb
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\bin\Debug\Content\images\BackdropBlackLittleSparkBlack.png
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\bin\Debug\FSparpGameAndroid.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\bin\Debug\FSparpGameAndroid.pdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\bin\Debug\FSparpGameAndroid.FSparpGameAndroid.apk

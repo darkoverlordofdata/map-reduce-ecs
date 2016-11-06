@@ -5,14 +5,6 @@ open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 open Microsoft.Xna.Framework.Content
 
-(** Sprite Component *)
-type Sprite =
-    {
-        Width: int;
-        Height: int;
-        Texture : Texture2D;
-    }
-
 (** IEntity Interface *)
 type IEntity = 
     abstract member Id : int with get
@@ -20,24 +12,24 @@ type IEntity =
     abstract member Active: bool with get
     abstract member EntityType: int with get
     abstract member Layer: int with get
-    abstract member Size: Vector2 with get
     abstract member Position: Vector2 with get
-    abstract member Sprite: Sprite option with get
+    abstract member Sprite: Texture2D option with get
     abstract member Scale: Vector2 option with get
+    abstract member Tint: Color option with get
 
 (** Base Game Class *)
 type AbstractGame (height, width, mobile) as this =
     inherit Game()
 
-    let scaleX = (float32) (width / 320)
-    let scaleY = (float32) (height / 480)
-    let matrix = Matrix.CreateScale(scaleX, scaleY, 1.0f)
     let spriteBatch = lazy(new SpriteBatch(this.GraphicsDevice))
     let graphics = new GraphicsDeviceManager(this)
     let mutable fpsRect = Rectangle(0, 0, 16, 24)
     let fntImage = lazy(this.Content.Load<Texture2D>("images/tom-thumb-white"))
     let bgdImage = lazy(this.Content.Load<Texture2D>("images/BackdropBlackLittleSparkBlack"))
     let bgdRect = Rectangle(0, 0, width, height)
+    let scaleX = (float32) (width / 320)
+    let scaleY = (float32) (height / 480)
+    let matrix = Matrix.CreateScale(scaleX, scaleY, 1.0f)
     do
         this.Content.RootDirectory <- "Content"
         graphics.IsFullScreen <- mobile
@@ -47,17 +39,22 @@ type AbstractGame (height, width, mobile) as this =
 
     (** Draw the sprite for an Entity *)
     let DrawSprite(spriteBatch:SpriteBatch) (entity:IEntity) =
-        if entity.Sprite.IsSome then 
-            let sprite = entity.Sprite.Value
+        match entity.Sprite with
+        | Some sprite ->
             let scale =
                 match entity.Scale with
                 | Some(scale) -> scale
                 | None -> Vector2(1.f, 1.f)
+            let color = 
+                match entity.Tint with 
+                | Some(color) -> color
+                | None -> Color.White
             let w = int(float32 sprite.Width * scale.X)
             let h = int(float32 sprite.Height * scale.Y)
-            let x = int(entity.Position.X - float32(w/2))
-            let y = int(entity.Position.Y - float32(h/2))
-            spriteBatch.Draw(sprite.Texture, Rectangle(x, y, w, h), Color.White)    
+            let x = int(entity.Position.X) - w/2
+            let y = int(entity.Position.Y) - h/2
+            spriteBatch.Draw(sprite, Rectangle(x, y, w, h), color)    
+        | None -> ()
 
     (** Draw a FPS in top left corner *)
     let DrawFps(spriteBatch:SpriteBatch, fps:float32)  =

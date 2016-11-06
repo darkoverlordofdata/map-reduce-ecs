@@ -4,15 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/BackdropBlackLittleSparkBlack.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/bullet.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/enemy1.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/enemy2.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/enemy3.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/explosion.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/fighter.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/particle.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/star.png</File>
-    <File>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/tom-thumb-white.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/BackdropBlackLittleSparkBlack.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/bullet.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/enemy1.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/enemy2.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/enemy3.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/explosion.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/fighter.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/particle.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/star.png</File>
+    <File>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/tom-thumb-white.png</File>
   </SourceFiles>
 </SourceFileCollection>

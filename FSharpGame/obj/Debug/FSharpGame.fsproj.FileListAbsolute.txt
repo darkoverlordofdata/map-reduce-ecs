@@ -34,23 +34,6 @@ C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\D
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\ExpiringSystem.fs
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\RemoveOffscreenShipsSystem.fs
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\ScaleAnimationSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\CollisionSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\EnemySpawningSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\InputSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\MovementSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\ExpiringSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\RemoveOffscreenShipsSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Systems\ScaleAnimationSystem.fs
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\BackdropBlackLittleSparkBlack.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\bullet.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\enemy1.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\enemy2.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\enemy3.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\explosion.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\fighter.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\particle.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\star.png
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\images\tom-thumb-white.png
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe.config
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.XML
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe
@@ -70,3 +53,4 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Fra
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.xml
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.exe
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.pdb
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Extended.dll

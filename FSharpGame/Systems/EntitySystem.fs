@@ -39,7 +39,7 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
                     entity with
                         Active = true;
                         Expires = Some(0.5f);                        
-                        Position = Vector2(bullet.Position.X, bullet.Position.Y);
+                        Position = Vector2(bullet.X, bullet.Y);
                 }
         | Layer.ENEMY1 ->
             match game.Enemies1 with
@@ -84,7 +84,7 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
                         Active = true;
                         Expires = Some(0.2f);                        
                         Scale = Some(Vector2(exp.Scale, exp.Scale));
-                        Position = Vector2(exp.Position.X, exp.Position.Y);
+                        Position = Vector2(exp.X, exp.Y);
                 }
         | _ -> entity
 

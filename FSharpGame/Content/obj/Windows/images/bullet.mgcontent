@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/images/bullet.png</SourceFile>
-  <SourceTime>2016-10-31T20:00:06.6810922-07:00</SourceTime>
-  <DestFile>C:/Users/bruce/documents/visual studio 2015/Projects/FSharpGame/FSharpGame/Content/bin/Windows/images/bullet.xnb</DestFile>
-  <DestTime>2016-10-31T22:52:06.76182-07:00</DestTime>
+  <SourceFile>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/Content/images/bullet.png</SourceFile>
+  <SourceTime>2016-10-16T00:44:09.3900108-07:00</SourceTime>
+  <DestFile>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGame/bin/Debug/Content/images/bullet.xnb</DestFile>
+  <DestTime>2016-11-05T22:38:11.3653538-07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-29T23:36:08-07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -44,26 +44,27 @@ type ShmupWarz (height, width, mobile) as this =
                  |> EnemySpawningSystem(delta, this)
                  )
 
-        this.EntityList <- (ActiveEntities (Entities.Force()) [])
+        // pick up the list when we draw
+        this.EntityList <- ActiveEntities (Entities.Force())
 
     (** Deactivate an Entity *)
-    override this.RemoveEntity(entity:IEntity) =
-        this.Deactivate <- entity.Id :: this.Deactivate
+    override this.RemoveEntity(id:int) =
+        this.Deactivate <- id :: this.Deactivate
 
-    (** Activate a Bullet *)
-    override this.AddBullet(position : Vector2) =
-        this.Bullets <- CreateTBullet(position) :: this.Bullets
+    (** Que a Bullet *)
+    override this.AddBullet(x: float32, y:float32) =
+        this.Bullets <- BulletQue(x, y) :: this.Bullets
 
-    (** Activate an Enemy *)
+    (** Que a Enemy *)
     override this.AddEnemy(enemy : Enemies) =
         match enemy with 
-        | Enemies.Enemy1 -> this.Enemies1 <- CreateTEnemy(enemy) :: this.Enemies1
-        | Enemies.Enemy2 -> this.Enemies2 <- CreateTEnemy(enemy) :: this.Enemies2
-        | Enemies.Enemy3 -> this.Enemies3 <- CreateTEnemy(enemy) :: this.Enemies3
+        | Enemies.Enemy1 -> this.Enemies1 <- EnemyQue(enemy) :: this.Enemies1
+        | Enemies.Enemy2 -> this.Enemies2 <- EnemyQue(enemy) :: this.Enemies2
+        | Enemies.Enemy3 -> this.Enemies3 <- EnemyQue(enemy) :: this.Enemies3
         | _ -> ()
 
-    (** Activate an Explosion *)
-    override this.AddExplosion(position : Vector2, scale : float32) =
-        this.Explosions <- CreateTExplosion(position, scale) :: this.Explosions
+    (** Que an Explosion *)
+    override this.AddExplosion(x: float32, y:float32, scale : float32) =
+        this.Explosions <- ExplosionQue(x, y, scale) :: this.Explosions
 
 

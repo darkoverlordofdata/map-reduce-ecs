@@ -19,8 +19,8 @@ let InputSystem (kbState:KeyboardState, msState:MouseState, tcState:TouchCollect
             | Keys.Z -> 
                 timeToFire <- timeToFire - delta
                 if timeToFire <= 0.0f then
-                    game.AddBullet((Vector2(entity.Position.X-27.f, entity.Position.Y)))
-                    game.AddBullet((Vector2(entity.Position.X+27.f, entity.Position.Y)))
+                    game.AddBullet(entity.Position.X-27.f, entity.Position.Y)
+                    game.AddBullet(entity.Position.X+27.f, entity.Position.Y)
                     timeToFire <- 0.1f
                 HandleKeys xs 
             | _ -> 
@@ -35,8 +35,8 @@ let InputSystem (kbState:KeyboardState, msState:MouseState, tcState:TouchCollect
                 let newPosition = Vector2(float32 (p.X/pf), float32 (p.Y/pf))
                 timeToFire <- timeToFire - delta
                 if timeToFire <= 0.0f then
-                    game.AddBullet(Vector2(float32 (newPosition.X-27.0f), float32 (newPosition.Y)))
-                    game.AddBullet(Vector2(float32 (newPosition.X+27.0f), float32 (newPosition.Y)))
+                    game.AddBullet(newPosition.X-27.0f, newPosition.Y)
+                    game.AddBullet(newPosition.X+27.0f, newPosition.Y)
                     timeToFire <- 0.1f
                 newPosition
 
@@ -48,8 +48,8 @@ let InputSystem (kbState:KeyboardState, msState:MouseState, tcState:TouchCollect
                 | ButtonState.Pressed ->
                     timeToFire <- timeToFire - delta
                     if timeToFire <= 0.0f then
-                        game.AddBullet(Vector2(float32 (msState.X-27), float32 (msState.Y)))
-                        game.AddBullet(Vector2(float32 (msState.X+27), float32 (msState.Y)))
+                        game.AddBullet(float32 (msState.X-27), float32 msState.Y)
+                        game.AddBullet(float32 (msState.X+27), float32 msState.Y)
                         timeToFire <- 0.1f
                     newPosition
 
