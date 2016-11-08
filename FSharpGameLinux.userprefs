@@ -1,13 +1,13 @@
-﻿<Properties StartupItem="FSharpGameLinux/FSharpGameLinux.fsproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/Entity.fs">
+﻿<Properties StartupConfiguration="{FCE96792-0BBB-4213-9646-562AB981A60F}|Default" StartupItem="FSharpGameLinux/FSharpGameLinux.fsproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/Core.fs">
     <Files>
-      <File FileName="FSharpGame/Program.fs" Line="9" Column="5" />
-      <File FileName="FSharpGame/Entity.fs" Line="38" Column="15" />
+      <File FileName="FSharpGame/Core.fs" Line="4" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FSharpGameLinux PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

@@ -1,6 +1,10 @@
 ﻿<Properties StartupItem="FSharpGame/FSharpGame.fsproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/Core.fs">
+    <Files>
+      <File FileName="FSharpGame/Core.fs" Line="22" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
