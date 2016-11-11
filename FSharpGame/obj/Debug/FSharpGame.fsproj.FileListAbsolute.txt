@@ -54,3 +54,4 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.exe
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.pdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Extended.dll
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.fsprojResolveAssemblyReference.cache

@@ -1,5 +1,4 @@
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.fs
-/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/FSharp.Core.dll
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Content/obstacle.png
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Content/player.png
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Content/animtest.png
@@ -29,4 +28,5 @@
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Platformer.exe
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/obj/Debug/Platformer.exe
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/obj/Debug/Platformer.exe.mdb
+/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/FSharp.Core.dll
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/MonoGame.Framework.dll
