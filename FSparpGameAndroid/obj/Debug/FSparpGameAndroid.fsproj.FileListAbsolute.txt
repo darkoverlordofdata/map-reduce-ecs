@@ -79,4 +79,4 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\andro
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\FSparpGameAndroid.dll.mdb
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\bin\Debug\FSparpGameAndroid.dll.mdb
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\FSparpGameAndroid.fsprojResolveAssemblyReference.cache

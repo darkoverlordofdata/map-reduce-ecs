@@ -5,7 +5,6 @@ open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Graphics
 open Microsoft.Xna.Framework.Input
 open Microsoft.Xna.Framework.Input.Touch
-
 open System.Collections.Generic
 
 
@@ -32,6 +31,7 @@ type ShmupWarz (height, width, mobile) as this =
         let delta = float32 gameTime.ElapsedGameTime.TotalSeconds
         let current = Entities.Value
 
+        EnemySpawningSystem(delta, this) |> ignore
         Entities <-  // Everything happens here:
             lazy (current
                  |> List.map(InputSystem(Keyboard.GetState(), Mouse.GetState(), TouchPanel.GetState(), delta, mobile, this))
@@ -41,7 +41,6 @@ type ShmupWarz (height, width, mobile) as this =
                  |> List.map(ScaleAnimationSystem(delta, this))
                  |> List.map(RemoveOffscreenShipsSystem(this, width, height))
                  |> CollisionSystem(this)
-                 |> EnemySpawningSystem(delta, this)
                  )
 
         // pick up the list when we draw
@@ -67,4 +66,6 @@ type ShmupWarz (height, width, mobile) as this =
     override this.AddExplosion(x: float32, y:float32, scale : float32) =
         this.Explosions <- ExplosionQue(x, y, scale) :: this.Explosions
 
-
+    (** Que an Bang *)
+    override this.AddBang(x: float32, y:float32, scale : float32) =
+        this.Bangs <- ExplosionQue(x, y, scale) :: this.Bangs

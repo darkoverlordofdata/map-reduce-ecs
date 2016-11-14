@@ -8,12 +8,11 @@ type Timers =
     | Timer2 = 7
     | Timer3 = 13
 
-
 let mutable enemyT1 = float32(Timers.Timer1)
 let mutable enemyT2 = float32(Timers.Timer2)
 let mutable enemyT3 = float32(Timers.Timer3)
 
-let EnemySpawningSystem (delta:float32, game:EcsGame) entities =
+let EnemySpawningSystem (delta:float32, game:EcsGame)  =
 
     //let igame = game:>IGame
     let spawnEnemy (t:float32, enemy) =
@@ -31,7 +30,7 @@ let EnemySpawningSystem (delta:float32, game:EcsGame) entities =
     enemyT1 <- spawnEnemy(enemyT1, Enemies.Enemy1)
     enemyT2 <- spawnEnemy(enemyT2, Enemies.Enemy2)
     enemyT3 <- spawnEnemy(enemyT3, Enemies.Enemy3)
+    
 
-
-    entities
+    
 

@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{FCE96792-0BBB-4213-9646-562AB981A60F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/Core.fs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FSharpGame/Program.fs">
     <Files>
-      <File FileName="FSharpGame/Core.fs" Line="80" Column="58" />
-      <File FileName="FSharpGame/ShmupWarzGame.fs" Line="29" Column="54" />
-      <File FileName="FSharpGame/Entity.fs" Line="1" Column="1" />
-      <File FileName="FSharpGame/Program.fs" Line="4" Column="1" />
+      <File FileName="FSharpGame/Systems/EntitySystem.fs" Line="1" Column="1" />
+      <File FileName="FSharpGame/Systems/CollisionSystem.fs" Line="1" Column="1" />
+      <File FileName="FSharpGame/Components.fs" Line="51" Column="5" />
+      <File FileName="FSharpGame/ShmupWarzGame.fs" Line="23" Column="1" />
+      <File FileName="FSharpGame/Program.fs" Line="12" Column="19" />
+      <File FileName="FSharpGame/Core.fs" Line="1" Column="1" />
+      <File FileName="FSharpGame/Systems/ScaleAnimationSystem.fs" Line="14" Column="28" />
+      <File FileName="FSharpGame/Systems/RemoveOffscreenShipsSystem.fs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -20,10 +20,12 @@ type EcsGame(height, width, mobile)=
     member val Enemies2 = List.empty<EnemyQueItem> with get,set
     member val Enemies3 = List.empty<EnemyQueItem> with get,set
     member val Explosions = List.empty<ExplosionQueItem> with get,set
+    member val Bangs = List.empty<ExplosionQueItem> with get,set
 
     abstract member AddBullet : float32 * float32 -> unit
     abstract member AddEnemy : Enemies -> unit 
     abstract member AddExplosion : float32 * float32 * float32 -> unit
+    abstract member AddBang : float32 * float32 * float32 -> unit
     abstract member RemoveEntity: int -> unit
 
 

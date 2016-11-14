@@ -34,11 +34,14 @@ C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\D
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\ExpiringSystem.fs
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\RemoveOffscreenShipsSystem.fs
 C:\Users\bruce\documents\visual studio 2015\Projects\FSharpGame\FSharpGame\bin\Debug\Systems\ScaleAnimationSystem.fs
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\project.dt
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe.config
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.XML
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.pdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.dll
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Data.dll
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Extended.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Framework.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.MediaFoundation.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.dll
@@ -49,9 +52,10 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.Dire
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.XInput.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.RawInput.dll
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\SharpDX.Direct3D9.dll
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Data.pdb
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Data.xml
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Framework.xml
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.xml
+C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.fsproj.FSharpGame.exe.config
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.exe
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.pdb
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\MonoGame.Extended.dll
-C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.fsprojResolveAssemblyReference.cache

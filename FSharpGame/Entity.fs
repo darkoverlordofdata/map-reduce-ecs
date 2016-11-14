@@ -181,13 +181,34 @@ let CreateExplosion (content:ContentManager, x: float32, y: float32, scale:float
         Tint = Some(Color.LightGoldenrodYellow);
 
         Bounds = None;
-        Expires = Some(0.2f);
+        Expires = Some(0.5f);
         Health = None;
         Velocity = None;
         ScaleAnimation = Some(CreateScaleAnimation(scale/100.f, scale, -3.f, false, true));
         Size = Vector2(float32 sprite.Width, float32 sprite.Height);
     }
 
+let CreateBang (content:ContentManager, x: float32, y: float32, scale:float32) =
+    let position = Vector2(x, y)
+    let sprite = content.Load<Texture2D>("images/bang")
+    {
+        Id = NextUniqueId();
+        Name = "Bang";
+        Active = false;
+        EntityType = EntityType.Explosion; 
+        Layer = Layer.BANG;
+        Position = position; 
+        Scale = Some(Vector2(scale, scale))
+        Sprite = Some(sprite);
+        Tint = Some(Color.PaleGoldenrod);
+
+        Bounds = None;
+        Expires = Some(0.5f);
+        Health = None;
+        Velocity = None;
+        ScaleAnimation = Some(CreateScaleAnimation(scale/100.f, scale, -3.f, false, true));
+        Size = Vector2(float32 sprite.Width, float32 sprite.Height);
+    }
 
 (**
  * Create the Entity DataBase
@@ -195,6 +216,14 @@ let CreateExplosion (content:ContentManager, x: float32, y: float32, scale:float
 let CreateEntityDB(content, width, height) = 
     [
         CreatePlayer(content, float32(width/2), float32 (height-80));
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
+        CreateBang(content, 0.f, 0.f, 1.f);
         CreateExplosion(content, 0.f, 0.f, 1.f);
         CreateExplosion(content, 0.f, 0.f, 1.f);
         CreateExplosion(content, 0.f, 0.f, 1.f);

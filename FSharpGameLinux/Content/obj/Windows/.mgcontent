@@ -4,7 +4,6 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/BackdropBlackLittleSparkBlack.png</File>
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/bullet.png</File>
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/enemy1.png</File>
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/enemy2.png</File>
@@ -14,5 +13,7 @@
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/particle.png</File>
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/star.png</File>
     <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/tom-thumb-white.png</File>
+    <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/BackdropBlackLittleSparkBlack.png</File>
+    <File>/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/Content/images/bang.png</File>
   </SourceFiles>
 </SourceFileCollection>

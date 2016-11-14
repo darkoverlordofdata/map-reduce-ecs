@@ -30,3 +30,4 @@
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/obj/Debug/Platformer.exe.mdb
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/FSharp.Core.dll
 /media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/MonoGame.Framework.dll
+/media/bruce/OS/Users/bruce/Documents/GitHub/map-reduce-ecs/FSharpGameLinux/bin/Debug/Content/images/bang.xnb

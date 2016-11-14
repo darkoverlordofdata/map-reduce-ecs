@@ -2,6 +2,7 @@
 module EntitySystem
 open Microsoft.Xna.Framework
 open Microsoft.Xna.Framework.Input
+
 (**
  * Activate / Deactiveate Entities as needed 
  *)
@@ -79,6 +80,18 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
             | [] -> entity
             | exp :: rest ->
                 game.Explosions <- rest
+                {
+                    entity with 
+                        Active = true;
+                        Expires = Some(0.2f);                        
+                        Scale = Some(Vector2(exp.Scale, exp.Scale));
+                        Position = Vector2(exp.X, exp.Y);
+                }
+        | Layer.BANG ->
+            match game.Bangs with
+            | [] -> entity
+            | exp :: rest ->
+                game.Bangs <- rest
                 {
                     entity with 
                         Active = true;

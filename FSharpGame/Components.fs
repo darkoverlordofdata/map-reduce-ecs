@@ -22,8 +22,9 @@ type Layer =
     | PLAYER            = 7
     | BULLET            = 8
     | EXPLOSION         = 9
-    | PARTICLE          = 10
-    | HUD               = 11
+    | BANG              = 10
+    | PARTICLE          = 11
+    | HUD               = 12
 
 
 (** EntityType Component *)
