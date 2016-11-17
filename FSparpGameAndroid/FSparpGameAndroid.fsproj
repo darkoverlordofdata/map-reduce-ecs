@@ -54,6 +54,9 @@
     <AndroidAsset Include="Assets\Content\images\BackdropBlackLittleSparkBlack.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\images\bang.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
     <AndroidAsset Include="Assets\Content\images\bullet.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
@@ -82,16 +85,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <Compile Include="Resources\Resource.designer.fs" />
-    <None Include="Content\images\BackdropBlackLittleSparkBlack.png" />
-    <None Include="Content\images\bullet.png" />
-    <None Include="Content\images\enemy1.png" />
-    <None Include="Content\images\enemy2.png" />
-    <None Include="Content\images\enemy3.png" />
-    <None Include="Content\images\explosion.png" />
-    <None Include="Content\images\fighter.png" />
-    <None Include="Content\images\particle.png" />
-    <None Include="Content\images\star.png" />
-    <None Include="Content\images\tom-thumb-white.png" />
     <None Include="Resources\AboutResources.txt" />
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>

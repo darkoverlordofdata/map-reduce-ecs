@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSparpGameAndroid/Content/images/fighter.png</SourceFile>
-  <SourceTime>2016-10-16T00:44:09.4441552-07:00</SourceTime>
-  <DestFile>C:/Users/bruce/Documents/GitHub/map-reduce-ecs/FSparpGameAndroid/Assets/Content/images/fighter.xnb</DestFile>
-  <DestTime>2016-11-05T23:55:46.3021154-07:00</DestTime>
+  <SourceFile>C:/Users/darko/Documents/GitHub/map-reduce-ecs/FSparpGameAndroid/Content/images/fighter.png</SourceFile>
+  <SourceTime>2016-11-16T18:21:48.3437728-08:00</SourceTime>
+  <DestFile>C:/Users/darko/Documents/GitHub/map-reduce-ecs/FSparpGameAndroid/Assets/Content/images/fighter.xnb</DestFile>
+  <DestTime>2016-11-16T18:24:53.1795262-08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2016-03-29T23:36:08-07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
