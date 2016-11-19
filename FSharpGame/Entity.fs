@@ -255,25 +255,25 @@ let CreateEntityDB(content, width, height) =
         CreateBullet(content, 0.f, 0.f);
         CreateBullet(content, 0.f, 0.f);
         CreateBullet(content, 0.f, 0.f);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy1(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy2(content, width, height);
-        CreateEnemy3(content, width, height);
-        CreateEnemy3(content, width, height);
-        CreateEnemy3(content, width, height);
-        CreateEnemy3(content, width, height);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy1(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy2(content, 0, 0);
+        CreateEnemy3(content, 0, 0);
+        CreateEnemy3(content, 0, 0);
+        CreateEnemy3(content, 0, 0);
+        CreateEnemy3(content, 0, 0);
 
     ]
 

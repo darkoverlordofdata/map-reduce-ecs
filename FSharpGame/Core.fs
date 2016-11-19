@@ -21,14 +21,15 @@ type IEntity =
 type AbstractGame (height, width, mobile) as this =
     inherit Game()
 
+    let pixelFactor = if mobile then 2.0f else 1.0f
     let spriteBatch = lazy(new SpriteBatch(this.GraphicsDevice))
     let graphics = new GraphicsDeviceManager(this)
     let mutable fpsRect = Rectangle(0, 0, 16, 24)
     let fntImage = lazy(this.Content.Load<Texture2D>("images/tom-thumb-white"))
     let bgdImage = lazy(this.Content.Load<Texture2D>("images/BackdropBlackLittleSparkBlack"))
     let bgdRect = Rectangle(0, 0, width, height)
-    let scaleX = (float32) (width / 320)
-    let scaleY = (float32) (height / 480)
+    let scaleX = (float32) (width / 320) // pixelFactor
+    let scaleY = (float32) (height / 480) // pixelFactor
     let matrix = Matrix.CreateScale(scaleX, scaleY, 1.0f)
     do
         this.Content.RootDirectory <- "Content"

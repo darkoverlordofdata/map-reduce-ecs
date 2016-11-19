@@ -3,7 +3,7 @@
 
 /outputDir:..\Assets\Content
 /intermediateDir:obj/$(Platform)
-/platform:Windows
+/platform:Android
 /config:
 /profile:Reach
 /compress:False

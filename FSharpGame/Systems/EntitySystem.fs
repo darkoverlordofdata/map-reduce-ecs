@@ -50,7 +50,7 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
                {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(width)), 100.f);
+                        Position = Vector2(float32(rnd.Next(width-35)), 91.f/2.0f);
                         Health = Some(CreateHealth(10, 10));
                 }
         | Layer.ENEMY2 ->
@@ -61,7 +61,7 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
                 {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(width)), 200.f);
+                        Position = Vector2(float32(rnd.Next(width-86)), 172.f/2.0f);
                         Health = Some(CreateHealth(20, 20));                
                 }
         | Layer.ENEMY3 ->
@@ -72,7 +72,7 @@ let EntitySystem (game:EcsGame, width: int, height: int) entity =
                 {
                     entity with 
                         Active = true;
-                        Position = Vector2(float32(rnd.Next(width)), 300.f);
+                        Position = Vector2(float32(rnd.Next(width-160)), 320.f/2.0f);
                         Health = Some(CreateHealth(60, 60));                
                 }
         | Layer.EXPLOSION ->

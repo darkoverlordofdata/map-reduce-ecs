@@ -8,9 +8,11 @@ open Microsoft.Xna.Framework.Input.Touch
 open System.Collections.Generic
 
 
-type ShmupWarz (height, width, mobile) as this =
-    inherit EcsGame(height, width, mobile)
+type ShmupWarz (height, width0, mobile) as this =
+    inherit EcsGame(height, width0, mobile)
 
+    let pixelFactor = (if mobile then 2.0f else 1.0f)
+    let width = (int)((float32)width0/pixelFactor)
     let mutable Entities = lazy(CreateEntityDB(this.Content, width, height))
 
     (** Initialize MonoGame *)

@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "FSparpGameAndroid.dll" comes first in this list. */
 		"FSparpGameAndroid.dll",
+		"FSharp.Core.dll",
 		"MonoGame.Framework.dll",
 		"System.Threading.dll",
 		"System.Runtime.dll",
