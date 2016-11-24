@@ -80,3 +80,45 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\andro
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\FSparpGameAndroid.dll.mdb
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid\obj\Debug\FSparpGameAndroid.fsprojResolveAssemblyReference.cache
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.dll
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.pdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.FSparpGameAndroid.apk
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.FSparpGameAndroid-Signed.apk
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSharp.Core.dll
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\MonoGame.Framework.dll
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\MonoGame.Framework.xml
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\FSparpGameAndroid.fsprojResolveAssemblyReference.cache
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\FSparpGameAndroid.dll
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\FSparpGameAndroid.pdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\bin\FSparpGameAndroid.FSparpGameAndroid.apk
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\res\layout\main.xml
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\res\values\strings.xml
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\res\drawable\icon.png
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\R.cs.flag
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\uploadflags.txt
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\Java.Interop.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\Mono.Android.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\mscorlib.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\OpenTK-1.0.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.ComponentModel.Composition.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.Core.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.Net.Http.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.Runtime.Serialization.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.ServiceModel.Internals.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\System.Xml.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\FSparpGameAndroid.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\Java.Interop.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\Mono.Android.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\mscorlib.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\OpenTK-1.0.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.Core.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.Net.Http.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\android\assets\System.Xml.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\obj\Debug\FSparpGameAndroid.dll.mdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSparpGameAndroid - Copy\bin\Debug\FSparpGameAndroid.dll.mdb

@@ -61,8 +61,6 @@ C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.e
 C:\Users\bruce\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.pdb
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\Content\project.dt
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe.config
-C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.XML
-C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.pdb
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.dll
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Data.dll
@@ -84,3 +82,5 @@ C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharp.Core.
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.fsproj.FSharpGame.exe.config
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.exe
 C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.pdb
+c:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\obj\Debug\FSharpGame.fsprojResolveAssemblyReference.cache
+C:\Users\darko\Documents\GitHub\map-reduce-ecs\FSharpGame\bin\Debug\FSharpGame.exe

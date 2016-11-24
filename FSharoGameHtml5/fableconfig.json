@@ -1,0 +1,8 @@
+{
+    "module": "amd",
+    "sourceMaps": true,
+    "projFile": "lib/shmupWarz-fable.fsproj",
+    "outDir": "web/src",
+    "scripts": {
+    }
+}
