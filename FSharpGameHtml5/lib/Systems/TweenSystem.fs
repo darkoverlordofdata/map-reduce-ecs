@@ -6,11 +6,10 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
 open Components
 open Entities
-open SystemInterface
 open System.Collections.Generic
 
 [<AutoOpen>]
@@ -32,7 +31,7 @@ module TweenSystemModule =
 
             {
                 entity with
-                    Scale = Some(PIXI.Point(x, y));
+                    Scale = Some(CreatePoint(x, y));
                     Tween = Some(CreateTween(sa.Min, sa.Max, sa.Speed, sa.Repeat, active));
             }
 

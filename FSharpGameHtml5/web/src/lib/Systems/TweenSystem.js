@@ -1,4 +1,4 @@
-define(["exports", "PIXI", "../Components", "../Entities"], function (exports, _PIXI, _Components, _Entities) {
+define(["exports", "../Components", "../Entities"], function (exports, _Components, _Entities) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -35,9 +35,9 @@ define(["exports", "PIXI", "../Components", "../Entities"], function (exports, _
                             }
                         }
 
-                        var Scale = new _PIXI.Point(x, y);
+                        var Scale = (0, _Components.CreatePoint)(x, y);
                         var Tween = (0, _Components.CreateTween)(sa.Min, sa.Max, sa.Speed, sa.Repeat, active);
-                        return new _Entities.Entity(entity.Id, entity.Name, entity.Active, entity.EntityType, entity.Layer, entity.Position, entity.Sprite, Scale, entity.Tint, entity.Bounds, entity.Expires, entity.Health, Tween, entity.Size, entity.Velocity);
+                        return new _Entities.Entity(entity.Id, entity.Name, entity.Active, entity.EntityType, entity.Layer, entity.Tint, entity.Bounds, entity.Expires, entity.Health, Tween, entity.Sprite, entity.Position, Scale, entity.Size, entity.Velocity);
                     }
                 } else {
                     return _target1();

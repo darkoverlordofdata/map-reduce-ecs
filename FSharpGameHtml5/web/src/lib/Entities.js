@@ -1,4 +1,4 @@
-define(["exports", "fable-core/Symbol", "PIXI", "fable-core/Util", "./Components"], function (exports, _Symbol2, _PIXI, _Util, _Components) {
+define(["exports", "fable-core/Symbol", "fable-core/Util", "./Components", "PIXI"], function (exports, _Symbol2, _Util, _Components, _PIXI) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -55,7 +55,7 @@ define(["exports", "fable-core/Symbol", "PIXI", "fable-core/Util", "./Components
     }
 
     var Entity = exports.Entity = function () {
-        function Entity(id, name, active, entityType, layer, position, sprite, scale, tint, bounds, expires, health, tween, size, velocity) {
+        function Entity(id, name, active, entityType, layer, tint, bounds, expires, health, tween, sprite, position, scale, size, velocity) {
             _classCallCheck(this, Entity);
 
             this.Id = id;
@@ -63,14 +63,14 @@ define(["exports", "fable-core/Symbol", "PIXI", "fable-core/Util", "./Components
             this.Active = active;
             this.EntityType = entityType;
             this.Layer = layer;
-            this.Position = position;
-            this.Sprite = sprite;
-            this.Scale = scale;
             this.Tint = tint;
             this.Bounds = bounds;
             this.Expires = expires;
             this.Health = health;
             this.Tween = tween;
+            this.Sprite = sprite;
+            this.Position = position;
+            this.Scale = scale;
             this.Size = size;
             this.Velocity = velocity;
         }
@@ -87,14 +87,14 @@ define(["exports", "fable-core/Symbol", "PIXI", "fable-core/Util", "./Components
                         Active: "boolean",
                         EntityType: "number",
                         Layer: "number",
-                        Position: _PIXI.Point,
-                        Sprite: (0, _Util.Option)(_PIXI.Sprite),
-                        Scale: (0, _Util.Option)(_PIXI.Point),
                         Tint: (0, _Util.Option)("number"),
                         Bounds: (0, _Util.Option)("number"),
                         Expires: (0, _Util.Option)("number"),
                         Health: (0, _Util.Option)(_Components.Health),
                         Tween: (0, _Util.Option)(_Components.Tween),
+                        Sprite: (0, _Util.Option)(_PIXI.Sprite),
+                        Position: _PIXI.Point,
+                        Scale: (0, _Util.Option)(_PIXI.Point),
                         Size: _PIXI.Point,
                         Velocity: (0, _Util.Option)(_PIXI.Point)
                     }
@@ -113,136 +113,136 @@ define(["exports", "fable-core/Symbol", "PIXI", "fable-core/Util", "./Components
     (0, _Util.declare)(Entity);
 
     function CreatePlayer(content) {
-        var sprite = new _PIXI.Sprite(content.fighter.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.fighter.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Player";
         var Active = true;
         var EntityType = 5;
         var Layer = 7;
-        var Position = new _PIXI.Point(0, 0);
+        var Position = (0, _Components.CreatePoint)(0, 0);
         var Scale = null;
         var Sprite = sprite;
         var Tint = null;
         var Bounds = 43;
         var Expires = null;
         var Health = (0, _Components.CreateHealth)(100, 100);
-        var Velocity = new _PIXI.Point(0, 0);
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, null, new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        var Velocity = (0, _Components.CreatePoint)(0, 0);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, null, Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateBullet(content) {
-        var sprite = new _PIXI.Sprite(content.bullet.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.bullet.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Bullet";
         var Active = false;
         var EntityType = 1;
         var Layer = 8;
-        var Position = new _PIXI.Point(0, 0);
+        var Position = (0, _Components.CreatePoint)(0, 0);
         var Scale = null;
         var Sprite = sprite;
         var Tint = 11403055;
         var Bounds = 5;
         var Expires = 0.1;
         var Health = null;
-        var Velocity = new _PIXI.Point(0, -800);
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, null, new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        var Velocity = (0, _Components.CreatePoint)(0, -800);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, null, Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateEnemy1(content) {
-        var sprite = new _PIXI.Sprite(content.enemy1.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.enemy1.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Enemy1";
         var Active = false;
         var EntityType = 2;
         var Layer = 4;
-        var Position = new _PIXI.Point(0, 0);
+        var Position = (0, _Components.CreatePoint)(0, 0);
         var Scale = null;
         var Sprite = sprite;
         var Tint = null;
         var Bounds = 20;
         var Expires = null;
         var Health = (0, _Components.CreateHealth)(10, 10);
-        var Velocity = new _PIXI.Point(0, 40);
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, null, new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        var Velocity = (0, _Components.CreatePoint)(0, 40);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, null, Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateEnemy2(content) {
-        var sprite = new _PIXI.Sprite(content.enemy2.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.enemy2.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Enemy2";
         var Active = false;
         var EntityType = 2;
         var Layer = 5;
-        var Position = new _PIXI.Point(0, 0);
+        var Position = (0, _Components.CreatePoint)(0, 0);
         var Scale = null;
         var Sprite = sprite;
         var Tint = null;
         var Bounds = 40;
         var Expires = null;
         var Health = (0, _Components.CreateHealth)(20, 20);
-        var Velocity = new _PIXI.Point(0, 30);
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, null, new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        var Velocity = (0, _Components.CreatePoint)(0, 30);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, null, Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateEnemy3(content) {
-        var sprite = new _PIXI.Sprite(content.enemy3.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.enemy3.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Enemy3";
         var Active = false;
         var EntityType = 2;
         var Layer = 6;
-        var Position = new _PIXI.Point(0, 0);
+        var Position = (0, _Components.CreatePoint)(0, 0);
         var Scale = null;
         var Sprite = sprite;
         var Tint = null;
         var Bounds = 70;
         var Expires = null;
         var Health = (0, _Components.CreateHealth)(60, 60);
-        var Velocity = new _PIXI.Point(0, 20);
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, null, new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        var Velocity = (0, _Components.CreatePoint)(0, 20);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, null, Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateExplosion(content) {
-        var sprite = new _PIXI.Sprite(content.explosion.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.explosion.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Explosion";
         var Active = false;
         var EntityType = 3;
         var Layer = 9;
-        var Position = new _PIXI.Point(0, 0);
-        var Scale = new _PIXI.Point(1, 1);
+        var Position = (0, _Components.CreatePoint)(0, 0);
+        var Scale = (0, _Components.CreatePoint)(1, 1);
         var Sprite = sprite;
         var Tint = 16448210;
         var Bounds = null;
         var Expires = 0.5;
         var Health = null;
         var Velocity = null;
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, (0, _Components.CreateTween)(1 / 100, 1, -3, false, true), new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, (0, _Components.CreateTween)(1 / 100, 1, -3, false, true), Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 
     function CreateBang(content) {
-        var sprite = new _PIXI.Sprite(content.bang.texture);
-        sprite.anchor = new _PIXI.Point(0.5, 0.5);
+        var sprite = (0, _Components.CreateSprite)(content.bang.texture);
+        sprite.anchor = (0, _Components.CreatePoint)(0.5, 0.5);
         var Id = NextUniqueId();
         var Name = "Bang";
         var Active = false;
         var EntityType = 3;
         var Layer = 10;
-        var Position = new _PIXI.Point(0, 0);
-        var Scale = new _PIXI.Point(1, 1);
+        var Position = (0, _Components.CreatePoint)(0, 0);
+        var Scale = (0, _Components.CreatePoint)(1, 1);
         var Sprite = sprite;
         var Tint = 15657130;
         var Bounds = null;
         var Expires = 0.5;
         var Health = null;
         var Velocity = null;
-        return new Entity(Id, Name, Active, EntityType, Layer, Position, Sprite, Scale, Tint, Bounds, Expires, Health, (0, _Components.CreateTween)(1 / 100, 1, -3, false, true), new _PIXI.Point(sprite.width, sprite.height), Velocity);
+        return new Entity(Id, Name, Active, EntityType, Layer, Tint, Bounds, Expires, Health, (0, _Components.CreateTween)(1 / 100, 1, -3, false, true), Sprite, Position, Scale, (0, _Components.CreatePoint)(sprite.width, sprite.height), Velocity);
     }
 });
 //# sourceMappingURL=Entities.js.map

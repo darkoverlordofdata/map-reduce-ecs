@@ -1,4 +1,4 @@
-define(["exports", "PIXI", "../Entities", "../Components", "fable-core/List"], function (exports, _PIXI, _Entities, _Components, _List) {
+define(["exports", "../Components", "../Entities", "fable-core/List"], function (exports, _Components, _Entities, _List) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -20,7 +20,7 @@ define(["exports", "PIXI", "../Entities", "../Components", "fable-core/List"], f
         var y = entity.Position.y;
         var w = entity.Size.x;
         var h = entity.Size.y;
-        return new _PIXI.Rectangle(x - w / 2, y - h / 2, w, h);
+        return (0, _Components.CreateRect)(x - w / 2, y - h / 2, w, h);
     }
 
     function CollisionSystem(game, entities) {
@@ -47,10 +47,10 @@ define(["exports", "PIXI", "../Entities", "../Components", "fable-core/List"], f
                                     if (health <= 0) {
                                         game.AddExplosion(b.Position.x, b.Position.y, 0.5);
                                         var Active = false;
-                                        return new _Entities.Entity(a.Id, a.Name, Active, a.EntityType, a.Layer, a.Position, a.Sprite, a.Scale, a.Tint, a.Bounds, a.Expires, a.Health, a.Tween, a.Size, a.Velocity);
+                                        return new _Entities.Entity(a.Id, a.Name, Active, a.EntityType, a.Layer, a.Tint, a.Bounds, a.Expires, a.Health, a.Tween, a.Sprite, a.Position, a.Scale, a.Size, a.Velocity);
                                     } else {
                                         var Health = (0, _Components.CreateHealth)(health, a.Health.MaxHealth);
-                                        return new _Entities.Entity(a.Id, a.Name, a.Active, a.EntityType, a.Layer, a.Position, a.Sprite, a.Scale, a.Tint, a.Bounds, a.Expires, Health, a.Tween, a.Size, a.Velocity);
+                                        return new _Entities.Entity(a.Id, a.Name, a.Active, a.EntityType, a.Layer, a.Tint, a.Bounds, a.Expires, Health, a.Tween, a.Sprite, a.Position, a.Scale, a.Size, a.Velocity);
                                     }
                                 }
                             } else {

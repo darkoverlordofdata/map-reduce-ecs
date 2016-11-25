@@ -1,4 +1,4 @@
-define(["exports", "fable-core/List", "./Entities", "./SystemInterface", "fable-core/Symbol", "fable-core/Util", "fable-core/Lazy", "PIXI", "./Bosco.Keyboard", "./Bosco.Mouse", "fable-core/Seq", "./Systems/EnemySpawningSystem", "./Systems/CollisionSystem", "./Systems/RemoveOffscreenShipsSystem", "./Systems/TweenSystem", "./Systems/ExpiringSystem", "./Systems/MovementSystem", "./Systems/EntitySystem", "./Systems/InputSystem", "./Components"], function (exports, _List, _Entities, _SystemInterface2, _Symbol2, _Util, _Lazy, _PIXI, _Bosco, _Bosco2, _Seq, _EnemySpawningSystem, _CollisionSystem, _RemoveOffscreenShipsSystem, _TweenSystem, _ExpiringSystem, _MovementSystem, _EntitySystem, _InputSystem, _Components) {
+define(["exports", "fable-core/List", "./Entities", "./Systems/SystemInterface", "fable-core/Symbol", "fable-core/Util", "fable-core/Lazy", "./Components", "./Bosco.Keyboard", "./Bosco.Mouse", "fable-core/Seq", "./Systems/EnemySpawningSystem", "./Systems/CollisionSystem", "./Systems/RemoveOffscreenShipsSystem", "./Systems/TweenSystem", "./Systems/ExpiringSystem", "./Systems/MovementSystem", "./Systems/EntitySystem", "./Systems/InputSystem"], function (exports, _List, _Entities, _SystemInterface2, _Symbol2, _Util, _Lazy, _Components, _Bosco, _Bosco2, _Seq, _EnemySpawningSystem, _CollisionSystem, _RemoveOffscreenShipsSystem, _TweenSystem, _ExpiringSystem, _MovementSystem, _EntitySystem, _InputSystem) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -130,15 +130,15 @@ define(["exports", "fable-core/List", "./Entities", "./SystemInterface", "fable-
                 return CreateEntityDB(_this2.contents.Content);
             });
             var fntImage = new _Lazy2.default(function () {
-                return new _PIXI.Sprite(_this2.contents.Content.font.texture);
+                return (0, _Components.CreateSprite)(_this2.contents.Content.font.texture);
             });
             _this2.bgdImage = new _Lazy2.default(function () {
-                return new _PIXI.Sprite(_this2.contents.Content.background.texture);
+                return (0, _Components.CreateSprite)(_this2.contents.Content.background.texture);
             });
-            var bgdRect = new _PIXI.Rectangle(0, 0, _this2.width, _this2.height);
+            var bgdRect = (0, _Components.CreateRect)(0, 0, _this2.width, _this2.height);
             var scaleX = _this2.width / 320;
             var scaleY = _this2.height / 480;
-            _this2["init@98-2"] = 1;
+            _this2["init@97-2"] = 1;
             return _this2;
         }
 
@@ -289,7 +289,7 @@ define(["exports", "fable-core/List", "./Entities", "./SystemInterface", "fable-
             key: "drawSprite",
             value: function drawSprite(spriteBatch, entity) {
                 if (entity.Sprite == null) {} else {
-                    var scale = entity.Scale == null ? new _PIXI.Point(1, 1) : entity.Scale;
+                    var scale = entity.Scale == null ? (0, _Components.CreatePoint)(1, 1) : entity.Scale;
                     var color = entity.Tint == null ? 16777215 : entity.Tint;
                     entity.Sprite.x = entity.Position.x;
                     entity.Sprite.y = entity.Position.y;

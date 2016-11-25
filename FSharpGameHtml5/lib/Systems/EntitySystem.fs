@@ -5,11 +5,10 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
 open Components
 open Entities
-open SystemInterface
 open System.Collections.Generic
 
 [<AutoOpen>]
@@ -50,7 +49,7 @@ module EntitySystemModule =
                         entity with
                             Active = true;
                             Expires = Some(0.5);                        
-                            Position = PIXI.Point(bullet.X, bullet.Y);
+                            Position = CreatePoint(bullet.X, bullet.Y);
                     }
             | Layer.ENEMY1 ->
                 match game.Enemies1 with
@@ -60,7 +59,7 @@ module EntitySystemModule =
                 {
                         entity with 
                             Active = true;
-                            Position = PIXI.Point(float(rnd.Next(width-35)), 91./2.0);
+                            Position = CreatePoint(float(rnd.Next(width-35)), 91./2.0);
                             Health = Some(CreateHealth(10, 10));
                     }
             | Layer.ENEMY2 ->
@@ -71,7 +70,7 @@ module EntitySystemModule =
                     {
                         entity with 
                             Active = true;
-                            Position = PIXI.Point(float(rnd.Next(width-86)), 172./2.);
+                            Position = CreatePoint(float(rnd.Next(width-86)), 172./2.);
                             Health = Some(CreateHealth(20, 20));                
                     }
             | Layer.ENEMY3 ->
@@ -82,7 +81,7 @@ module EntitySystemModule =
                     {
                         entity with 
                             Active = true;
-                            Position = PIXI.Point(float(rnd.Next(width-160)), 320./2.);
+                            Position = CreatePoint(float(rnd.Next(width-160)), 320./2.);
                             Health = Some(CreateHealth(60, 60));                
                     }
             | Layer.EXPLOSION ->
@@ -94,8 +93,8 @@ module EntitySystemModule =
                         entity with 
                             Active = true;
                             Expires = Some(0.2);                        
-                            Scale = Some(PIXI.Point(exp.Scale, exp.Scale));
-                            Position = PIXI.Point(exp.X, exp.Y);
+                            Scale = Some(CreatePoint(exp.Scale, exp.Scale));
+                            Position = CreatePoint(exp.X, exp.Y);
                     }
             | Layer.BANG ->
                 match game.Bangs with
@@ -106,8 +105,8 @@ module EntitySystemModule =
                         entity with 
                             Active = true;
                             Expires = Some(0.2);                        
-                            Scale = Some(PIXI.Point(exp.Scale, exp.Scale));
-                            Position = PIXI.Point(exp.X, exp.Y);
+                            Scale = Some(CreatePoint(exp.Scale, exp.Scale));
+                            Position = CreatePoint(exp.X, exp.Y);
                     }
             | _ -> entity
 

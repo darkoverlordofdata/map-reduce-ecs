@@ -1,4 +1,4 @@
-define(["exports", "./Bosco.Game", "fable-core/Symbol", "fable-core/Util", "fable-core/List", "./Components"], function (exports, _Bosco, _Symbol2, _Util, _List, _Components) {
+define(["exports", "../Bosco.Game", "fable-core/Symbol", "fable-core/Util", "fable-core/List", "../Components"], function (exports, _Bosco, _Symbol2, _Util, _List, _Components) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -112,7 +112,7 @@ define(["exports", "./Bosco.Game", "fable-core/Symbol", "fable-core/Util", "fabl
             _this["Enemies3@"] = new _List2.default();
             _this["Explosions@"] = new _List2.default();
             _this["Bangs@"] = new _List2.default();
-            _this["init@17-1"] = 1;
+            _this["init@19-1"] = 1;
             return _this;
         }
 

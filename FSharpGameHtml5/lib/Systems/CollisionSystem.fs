@@ -5,11 +5,10 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
 open Components
 open Entities
-open SystemInterface
 open System.Collections.Generic
 
 [<AutoOpen>]
@@ -20,7 +19,7 @@ module CollisionSystemModule =
         let y = entity.Position.y
         let w = entity.Size.x
         let h = entity.Size.y
-        PIXI.Rectangle(x - w/2., y - h/2., w, h):>PIXI.HitArea
+        CreateRect(x - w/2., y - h/2., w, h):>PIXI.HitArea
 
     (** Collision Handler for Entities *)
     let CollisionSystem (game:SystemInterface) entities =

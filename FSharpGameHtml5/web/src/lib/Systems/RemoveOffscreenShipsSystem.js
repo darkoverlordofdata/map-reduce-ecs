@@ -17,7 +17,7 @@ define(["exports", "../Entities"], function (exports, _Entities) {
             if (matchValue[1]) {
                 if ((entity.Position.y + 0x80000000 >>> 0) - 0x80000000 > height) {
                     var Active = false;
-                    return new _Entities.Entity(entity.Id, entity.Name, Active, entity.EntityType, entity.Layer, entity.Position, entity.Sprite, entity.Scale, entity.Tint, entity.Bounds, entity.Expires, entity.Health, entity.Tween, entity.Size, entity.Velocity);
+                    return new _Entities.Entity(entity.Id, entity.Name, Active, entity.EntityType, entity.Layer, entity.Tint, entity.Bounds, entity.Expires, entity.Health, entity.Tween, entity.Sprite, entity.Position, entity.Scale, entity.Size, entity.Velocity);
                 } else {
                     return _target1();
                 }

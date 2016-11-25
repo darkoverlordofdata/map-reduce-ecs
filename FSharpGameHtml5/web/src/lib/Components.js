@@ -1,4 +1,4 @@
-define(["exports", "fable-core/Symbol", "fable-core/Util"], function (exports, _Symbol2, _Util) {
+define(["exports", "fable-core/Symbol", "fable-core/Util", "PIXI"], function (exports, _Symbol2, _Util, _PIXI) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -10,6 +10,9 @@ define(["exports", "fable-core/Symbol", "fable-core/Util"], function (exports, _
     exports.EnemyQue = EnemyQue;
     exports.ExplosionQue = ExplosionQue;
     exports.BulletQue = BulletQue;
+    exports.CreatePoint = CreatePoint;
+    exports.CreateSprite = CreateSprite;
+    exports.CreateRect = CreateRect;
 
     var _Symbol3 = _interopRequireDefault(_Symbol2);
 
@@ -252,6 +255,18 @@ define(["exports", "fable-core/Symbol", "fable-core/Util"], function (exports, _
 
     function BulletQue(x, y) {
         return new BulletQueItem(x, y);
+    }
+
+    function CreatePoint(x, y) {
+        return new _PIXI.Point(x, y);
+    }
+
+    function CreateSprite(texture) {
+        return new _PIXI.Sprite(texture);
+    }
+
+    function CreateRect(x, y, w, h) {
+        return new _PIXI.Rectangle(x, y, w, h);
     }
 });
 //# sourceMappingURL=Components.js.map

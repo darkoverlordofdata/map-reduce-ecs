@@ -5,11 +5,10 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
 open Components
 open Entities
-open SystemInterface
 open System.Collections.Generic
 
 [<AutoOpen>]

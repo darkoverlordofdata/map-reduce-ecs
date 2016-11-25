@@ -6,8 +6,12 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
+#if WINDOWS || LINUX
+open Microsoft.Xna.Framework
+open Microsoft.Xna.Framework.Graphics
+#endif
 open Components
 open System.Collections.Generic
 let rnd = System.Random()
@@ -24,29 +28,39 @@ type Entity =
         Active          : bool;                 (* In use *)
         EntityType      : EntityType;           (* Category *)
         Layer           : Layer;                (* Display Layer *)
-        Position        : PIXI.Point;           (* Position *)
-        Sprite          : PIXI.Sprite option;   (* Sprite *)
-        Scale           : PIXI.Point option;    (* Display Scale *)
         Tint            : Color option;         (* Color to use as tint *)
         Bounds          : int option;           (* For Hit Detection *)
         Expires         : float option;         (* Entity duration *)
         Health          : Health option;        (* Points *)
         Tween           : Tween option;         (* Explosion tweens *)
+#if HTML5
+        Sprite          : PIXI.Sprite option;   (* Sprite *)
+        Position        : PIXI.Point;           (* Position *)
+        Scale           : PIXI.Point option;    (* Display Scale *)
         Size            : PIXI.Point;           (* Sprite size *)
         Velocity        : PIXI.Point option;    (* Movement speed *)
+#endif
+#if WINDOWS || LINUX
+        Position        : Vector2;              (* Position *)
+        Sprite          : Texture2D option;     (* Sprite *)
+        Scale           : Vector2 option;       (* Display Scale *)
+        Size            : Vector2;              (* Sprite size *)
+        Velocity        : Vector2 option;       (* Movement speed *)
+#endif
     }
+
 
 (** Create a Player Entity *)
 let CreatePlayer (content:obj) =
-    let sprite = PIXI.Sprite(unbox content?fighter?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?fighter?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Player";
         Active = true;
         EntityType = EntityType.Player; 
         Layer = Layer.PLAYER;
-        Position = PIXI.Point(0., 0.); 
+        Position = CreatePoint(0., 0.); 
         Scale = None;
         Sprite = Some(sprite);
         Tint = None;
@@ -54,22 +68,22 @@ let CreatePlayer (content:obj) =
         Bounds = Some(43);
         Expires = None;
         Health = Some(CreateHealth(100, 100));
-        Velocity = Some(PIXI.Point(0., 0.));
+        Velocity = Some(CreatePoint(0., 0.));
         Tween = None;
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
      
 (** Create a Bullet Entity *)
 let CreateBullet (content:obj) =
-    let sprite = PIXI.Sprite(unbox content?bullet?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?bullet?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Bullet";
         Active = false;
         EntityType = EntityType.Bullet; 
         Layer = Layer.BULLET;
-        Position = PIXI.Point(0., 0.); 
+        Position = CreatePoint(0., 0.); 
         Scale = None;
         Sprite = Some(sprite);
         Tint = Some(Color.GreenYellow);
@@ -77,22 +91,22 @@ let CreateBullet (content:obj) =
         Bounds = Some(5);
         Expires = Some(0.1);
         Health = None;
-        Velocity = Some(PIXI.Point(0., -800.));
+        Velocity = Some(CreatePoint(0., -800.));
         Tween = None;
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 
 (** Create Enemy *)
 let CreateEnemy1 (content:obj)  =
-    let sprite = PIXI.Sprite(unbox content?enemy1?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?enemy1?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Enemy1";
         Active = false;
         EntityType = EntityType.Enemy; 
         Layer = Layer.ENEMY1;
-        Position = PIXI.Point(0., 0.); 
+        Position = CreatePoint(0., 0.); 
         Scale = None;
         Sprite = Some(sprite);
         Tint = None;
@@ -100,21 +114,21 @@ let CreateEnemy1 (content:obj)  =
         Bounds = Some(20);
         Expires = None
         Health = Some(CreateHealth(10, 10));
-        Velocity = Some(PIXI.Point(0., 40.));
+        Velocity = Some(CreatePoint(0., 40.));
         Tween = None;
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 (** Create Enemy *)
 let CreateEnemy2 (content:obj) =
-    let sprite = PIXI.Sprite(unbox content?enemy2?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?enemy2?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Enemy2";
         Active = false;
         EntityType = EntityType.Enemy; 
         Layer = Layer.ENEMY2;
-        Position = PIXI.Point(0., 0.); 
+        Position = CreatePoint(0., 0.); 
         Scale = None;
         Sprite = Some(sprite);
         Tint = None;
@@ -122,22 +136,22 @@ let CreateEnemy2 (content:obj) =
         Bounds = Some(40);
         Expires = None
         Health = Some(CreateHealth(20, 20));
-        Velocity = Some(PIXI.Point(0., 30.));
+        Velocity = Some(CreatePoint(0., 30.));
         Tween = None;
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 
 (** Create Enemy *)
 let CreateEnemy3 (content:obj)  =
-    let sprite = PIXI.Sprite(unbox content?enemy3?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?enemy3?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Enemy3";
         Active = false;
         EntityType = EntityType.Enemy; 
         Layer = Layer.ENEMY3;
-        Position = PIXI.Point(0., 0.); 
+        Position = CreatePoint(0., 0.); 
         Scale = None;
         Sprite = Some(sprite);
         Tint = None;
@@ -145,23 +159,23 @@ let CreateEnemy3 (content:obj)  =
         Bounds = Some(70);
         Expires = None
         Health = Some(CreateHealth(60, 60));
-        Velocity = Some(PIXI.Point(0., 20.));
+        Velocity = Some(CreatePoint(0., 20.));
         Tween = None;
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 
 (** Create Big Explosion *)
 let CreateExplosion (content:obj) =
-    let sprite = PIXI.Sprite(unbox content?explosion?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?explosion?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Explosion";
         Active = false;
         EntityType = EntityType.Explosion; 
         Layer = Layer.EXPLOSION;
-        Position = PIXI.Point(0., 0.); 
-        Scale = Some(PIXI.Point(1., 1.))
+        Position = CreatePoint(0., 0.); 
+        Scale = Some(CreatePoint(1., 1.))
         Sprite = Some(sprite);
         Tint = Some(Color.LightGoldenrodYellow);
 
@@ -170,20 +184,20 @@ let CreateExplosion (content:obj) =
         Health = None;
         Velocity = None;
         Tween = Some(CreateTween(1./100., 1., -3., false, true));
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 
 let CreateBang (content:obj) =
-    let sprite = PIXI.Sprite(unbox content?bang?texture)
-    sprite.anchor <- PIXI.Point(0.5, 0.5)
+    let sprite = CreateSprite(unbox content?bang?texture)
+    sprite.anchor <- CreatePoint(0.5, 0.5)
     {
         Id = NextUniqueId();
         Name = "Bang";
         Active = false;
         EntityType = EntityType.Explosion; 
         Layer = Layer.BANG;
-        Position = PIXI.Point(0., 0.); 
-        Scale = Some(PIXI.Point(1., 1.))
+        Position = CreatePoint(0., 0.); 
+        Scale = Some(CreatePoint(1., 1.))
         Sprite = Some(sprite);
         Tint = Some(Color.PaleGoldenrod);
 
@@ -192,6 +206,6 @@ let CreateBang (content:obj) =
         Health = None;
         Velocity = None;
         Tween = Some(CreateTween(1./100., 1., -3., false, true));
-        Size = PIXI.Point(float sprite.width, float sprite.height);
+        Size = CreatePoint(float sprite.width, float sprite.height);
     }
 

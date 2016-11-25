@@ -6,11 +6,14 @@ open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
-#endif
 open Bosco
+#endif
+#if WINDOWS || LINUX
+open Microsoft.Xna.Framework
+open Microsoft.Xna.Framework.Graphics
+#endif
 open Components
 open Entities
-open SystemInterface
 open Systems
 open System.Collections.Generic
 
@@ -100,9 +103,9 @@ type ShmupWarz(height, width0, mobile) as this =
     let pixelFactor = (if mobile then 2.0 else 1.0)
     let width = ((float)width0/pixelFactor)
     let mutable entities = lazy(CreateEntityDB(this.Content))
-    let fntImage = lazy(PIXI.Sprite(unbox this.Content?font?texture))
-    let bgdImage = lazy(PIXI.Sprite(unbox this.Content?background?texture))
-    let bgdRect = PIXI.Rectangle(0., 0., width, height)
+    let fntImage = lazy(CreateSprite(unbox this.Content?font?texture))
+    let bgdImage = lazy(CreateSprite(unbox this.Content?background?texture))
+    let bgdRect = CreateRect(0., 0., width, height)
     let scaleX = (float) (width / 320.) // pixelFactor
     let scaleY = (float) (height / 480.) // pixelFactor
 
@@ -120,7 +123,7 @@ type ShmupWarz(height, width0, mobile) as this =
             let scale =
                 match entity.Scale with
                 | Some(scale) -> scale
-                | None -> PIXI.Point(1., 1.)
+                | None -> CreatePoint(1., 1.)
             let color = 
                 match entity.Tint with 
                 | Some(color) -> color

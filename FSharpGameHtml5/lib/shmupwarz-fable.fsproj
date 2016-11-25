@@ -20,7 +20,7 @@
     <Optimize>false</Optimize>
     <Tailcalls>false</Tailcalls>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;HTML5</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Debug\shmupwarz_fable.XML</DocumentationFile>
@@ -31,7 +31,7 @@
     <Optimize>true</Optimize>
     <Tailcalls>true</Tailcalls>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;HTML5</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Release\shmupwarz_fable.XML</DocumentationFile>
@@ -52,8 +52,8 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <None Include="App.config" />
-    <Compile Include="..\node_modules\fable-import-pixi\Fable.Import.Pixi.fs">
-      <Link>Fable.Import.Pixi.fs</Link>
+    <Compile Include="..\node_modules\fable-import-pixi\Fable.Import.PIXI.fs">
+      <Link>Fable.Import.PIXI.fs</Link>
     </Compile>
     <Compile Include="Bosco.Mouse.fs" />
     <Compile Include="Bosco.Keyboard.fs" />
@@ -61,7 +61,9 @@
     <Compile Include="Bosco.Game.fs" />
     <Compile Include="Components.fs" />
     <Compile Include="Entities.fs" />
-    <Compile Include="SystemInterface.fs" />
+    <Compile Include=".\Systems\SystemInterface.fs">
+      <Link>SystemInterface.fs</Link>
+    </Compile>
     <Compile Include=".\Systems\EntitySystem.fs">
       <Link>EntitySystem.fs</Link>
     </Compile>

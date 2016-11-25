@@ -1,4 +1,14 @@
 module Components
+#if HTML5
+open Fable.Core
+open Fable.Import
+open Fable.Import.Browser
+open Fable.Core.JsInterop
+#endif
+#if WINDOWS || LINUX
+open Microsoft.Xna.Framework
+open Microsoft.Xna.Framework.Graphics
+#endif
 
 (** Layer - All entities need a display layer *)
 type Layer =
@@ -110,3 +120,25 @@ let BulletQue(x:float, y:float) : BulletQueItem =
     }
     
 
+#if HTML5
+let CreatePoint(x, y) =
+    PIXI.Point(x, y)
+
+let CreateSprite(texture) =
+    PIXI.Sprite(texture)
+
+let CreateRect(x, y, w, h) =
+    PIXI.Rectangle(x, y, w, h)
+
+#endif
+
+#if WINDOWS || LINUX
+let CreatePoint(x, y) =
+    Vector2(x, y)
+
+let CreateSprite(texture) =
+    Texture2D(texture)
+
+let CreateRect(x, y, w, h) =
+    Rectangle(x, y, w, h)
+#endif

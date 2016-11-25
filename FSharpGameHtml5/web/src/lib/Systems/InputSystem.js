@@ -42,7 +42,7 @@ define(["exports", "../Bosco.Mouse", "../Bosco.Keyboard", "../Entities"], functi
                 }
             }();
 
-            return new _Entities.Entity(entity.Id, entity.Name, entity.Active, entity.EntityType, entity.Layer, position, entity.Sprite, entity.Scale, entity.Tint, entity.Bounds, entity.Expires, entity.Health, entity.Tween, entity.Size, entity.Velocity);
+            return new _Entities.Entity(entity.Id, entity.Name, entity.Active, entity.EntityType, entity.Layer, entity.Tint, entity.Bounds, entity.Expires, entity.Health, entity.Tween, entity.Sprite, position, entity.Scale, entity.Size, entity.Velocity);
         } else {
             return entity;
         }
