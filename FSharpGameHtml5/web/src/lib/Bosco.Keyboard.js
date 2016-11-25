@@ -56,4 +56,4 @@ define(["exports", "fable-core/Set", "fable-core/GenericComparer"], function (ex
         });
     }
 });
-//# sourceMappingURL=Keyboard.js.map
+//# sourceMappingURL=Bosco.Keyboard.js.map

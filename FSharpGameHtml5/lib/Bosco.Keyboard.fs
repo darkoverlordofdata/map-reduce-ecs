@@ -1,9 +1,11 @@
-﻿module Keyboard
+﻿namespace Bosco
 
+#if HTML5
 open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
+#endif
 
 module Keyboard =
     let mutable keysPressed = Set.empty

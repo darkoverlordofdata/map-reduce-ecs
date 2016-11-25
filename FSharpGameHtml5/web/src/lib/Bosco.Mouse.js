@@ -79,4 +79,4 @@ define(["exports", "PIXI"], function (exports, _PIXI) {
         });
     }
 });
-//# sourceMappingURL=Mouse.js.map
+//# sourceMappingURL=Bosco.Mouse.js.map

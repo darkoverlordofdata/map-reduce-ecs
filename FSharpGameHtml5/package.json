@@ -4,7 +4,7 @@
   "description": "this is the project that never ends...",
   "main": "index.js",
   "scripts": {
-    "compile": "fable .",
+    "compile": "fable --symbols HTML5 .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "darkoverlordofdata@gmail.com",

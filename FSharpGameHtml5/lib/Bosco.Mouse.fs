@@ -1,9 +1,11 @@
-﻿module Mouse
+﻿namespace Bosco
 
+#if HTML5
 open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
 open Fable.Core.JsInterop
+#endif
 
 module Mouse =
     let mutable down = false
