@@ -138,7 +138,7 @@ define(["exports", "fable-core/List", "./Entities", "./Systems/SystemInterface",
             var bgdRect = (0, _Components.CreateRect)(0, 0, _this2.width, _this2.height);
             var scaleX = _this2.width / 320;
             var scaleY = _this2.height / 480;
-            _this2["init@97-2"] = 1;
+            _this2["init@101-2"] = 1;
             return _this2;
         }
 

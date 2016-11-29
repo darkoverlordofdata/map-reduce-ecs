@@ -90,7 +90,7 @@ define(["exports", "fable-core/Symbol", "fable-core/Util", "PIXI"], function (ex
             document.body.appendChild(this.renderer.view);
             this["spriteBatch@"] = new _PIXI.Container();
             this["fps@"] = 0;
-            this["init@12"] = 1;
+            this["init@10"] = 1;
         }
 
         _createClass(Game, [{

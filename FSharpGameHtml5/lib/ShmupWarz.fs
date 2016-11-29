@@ -154,8 +154,10 @@ type ShmupWarz(height, width0, mobile) as this =
         ()
 
     override this.Update(gameTime) =
-        //  if GamePad.GetState(PlayerIndex.One).Buttons.Back = ButtonState.Pressed then 
-        //     this.Exit()
+#if WINDOWS || LINUX
+        if GamePad.GetState(PlayerIndex.One).Buttons.Back = ButtonState.Pressed then 
+            this.Exit()
+#endif
         let delta = gameTime
         let current = entities.Value
 
